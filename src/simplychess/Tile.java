@@ -8,29 +8,20 @@ import javafx.scene.shape.Rectangle;
  *
  * @author Tyler Jorgensen
  */
-public class Tile {
+public class Tile extends Rectangle {
     //class attributes
-    private final Rectangle r;
-    private final int x;
-    private final int y;
-    private final Color color; //possibly bool/string? dark/light
+    private final int WIDTH = 64;
+    private final int HEIGHT = 64;
+
     
     //Constructor for tile
-    public Tile(int x, int y, Color color){
-        this.r = new Rectangle();
-        this.x = x;
-        this.y = y;
-        this.color = color; 
+    public Tile(int x, int y){
+        this.setX(x); this.setY(y);
+        this.setHeight(HEIGHT);this.setWidth(WIDTH);
+        this.setLayoutX(x);this.setLayoutY(y);
     }
     
-    /*get methods for attributes*/
-    public int getX(){
-        return this.x;
+    public void setColor(Color c){
+        this.setFill(c);
     }
-    
-    public int getY(){
-        return this.y;
-    }
-    /*end get methods*/
-
 }
