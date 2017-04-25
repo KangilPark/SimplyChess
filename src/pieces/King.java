@@ -10,5 +10,5 @@ package pieces;
  * @author Tyler Jorgensen
  */
 public class King {
-    
+    /* this is a test comment */
 }
